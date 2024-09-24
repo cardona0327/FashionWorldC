@@ -1,5 +1,5 @@
-/* Estilo del formulario */
-form {
+/* Estilo del contenedor de formulario de deseos */
+#contenedor-formulario-deseos {
     background-color: #fdf9ff;
     border: 1px solid #e6e6fa;
     border-radius: 12px;
@@ -10,23 +10,26 @@ form {
     font-family: 'Poppins', sans-serif;
 }
 
-h1 {
+/* Estilo del título del formulario */
+#titulo-formulario-deseos {
     text-align: center;
     color: #5e3d99;
-    font-family: 'Poppins', sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-label {
+/* Estilo de las etiquetas del formulario */
+#label-nombre-deseo,
+#label-foto-referencia {
     display: block;
     margin-bottom: 8px;
     font-size: 16px;
     color: #5e3d99;
 }
 
-input[type="text"],
-input[type="file"] {
+/* Estilo del campo de texto */
+#input-nombre-deseo {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -37,11 +40,23 @@ input[type="file"] {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-input[type="text"]::placeholder {
+#input-nombre-deseo::placeholder {
     color: #999;
 }
 
-button[type="submit"] {
+/* Estilo del campo de carga de archivos */
+#input-foto-referencia {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo del botón de enviar */
+#btn-agregar-deseo {
     display: block;
     width: 100%;
     padding: 12px;
@@ -55,11 +70,17 @@ button[type="submit"] {
     font-family: 'Poppins', sans-serif;
 }
 
-button[type="submit"]:hover {
+#btn-agregar-deseo:hover {
     background-color: #7848b9;
 }
 
-/* Estilo para la lista de deseos */
+/* Estilo del mensaje de error */
+#mensaje-error {
+    color: red;
+    display: none;
+}
+
+/* Estilo individual de cada deseo */
 .deseo {
     background-color: #f9f9ff;
     border-radius: 12px;
@@ -83,9 +104,9 @@ button[type="submit"]:hover {
 }
 
 .deseo img {
-    width: 120px; /* Ajustamos el tamaño de todas las imágenes */
-    height: 120px; /* Altura fija para mantener consistencia */
-    object-fit: cover; /* Ajusta la imagen al tamaño sin distorsionarla */
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
     border-radius: 8px;
     border: 2px solid #7848b9;
     margin-right: 10px;
@@ -95,6 +116,7 @@ button[type="submit"]:hover {
     margin-right: 0;
 }
 
+/* Estilo del botón de eliminar deseo */
 .deseo a {
     display: inline-block;
     background-color: #f96b6b;
