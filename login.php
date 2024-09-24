@@ -25,7 +25,7 @@
         <div class="form-container">
             <h1>Iniciar sesión</h1>
             <form action="method/controler_login.php?recorrido=1" method="post">
-    <input type="number" name="documento" placeholder="Usuario" required><br><br>
+        <input type="number" name="documento" placeholder="Usuario" required><br><br>
     <div>
         <input type="password" id="password" name="contraseña" placeholder="Contraseña" required>
         <input type="checkbox" id="showPassword" onclick="visibilidadcontraseña()">mostrar contraseña
