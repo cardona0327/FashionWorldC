@@ -67,22 +67,24 @@ class Factura {
         include_once("modeloFactu.php");
         
         $consulta = ModeloFactu::sqlMostrarDetallesFactura($idFactura);
-        $salida = "<table class='table table-bordered'>";
-        $salida .= "<thead><tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr></thead><tbody>";
-        
-
+        $salida = "<div class='table-responsive'>"; // Envuelve la tabla en un div responsivo
+        $salida .= "<table id='detallesFactura' class='table table-bordered table-striped'>"; // Clases adicionales para el estilo
+        $salida .= "<thead class='thead-light'><tr><th>Producto</th><th>Cantidad</th><th>Precio Unitario</th><th>Subtotal</th></tr></thead><tbody>";
+    
         while ($fila = $consulta->fetch_assoc()) {
             $salida .= "<tr>";
-            $salida .= "<td>" . $fila['nombre_producto'] . "</td>"; // Asegúrate de obtener el nombre del producto
-            $salida .= "<td>" . $fila['cantidad'] . "</td>";
-            $salida .= "<td>$" . $fila['precio_unitario'] . "</td>";
-            $salida .= "<td>$" . $fila['subtotal'] . "</td>";
+            $salida .= "<td>" . htmlspecialchars($fila['nombre_producto']) . "</td>"; 
+            $salida .= "<td>" . htmlspecialchars($fila['cantidad']) . "</td>";
+            $salida .= "<td>$" . number_format($fila['precio_unitario'], 2) . "</td>";
+            $salida .= "<td>$" . number_format($fila['subtotal'], 2) . "</td>";
             $salida .= "</tr>";
         }
         
         $salida .= "</tbody></table>";
+        $salida .= "</div>"; // Cierra el div responsivo
         return $salida;
     }
+    
     
     
     public static function mostrarFactura($idFactura) {
