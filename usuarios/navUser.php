@@ -27,6 +27,7 @@
     <link href="../css/estilo.css" rel="stylesheet">
     <link href="../css/stylePro.css" rel="stylesheet">
     <link href="../css/carrito.css" rel="stylesheet">
+    <link href="../css/detalleFactu.css" rel="stylesheet">
     <link href="../css/stylePro.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/estiloFactura.css">
     <link href="../css/ofertaVis.css" rel="stylesheet">
